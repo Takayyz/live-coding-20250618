@@ -1,11 +1,13 @@
 # live-coding-20250618
 TDDに関するLive Coding用リポジトリ
 
-<!-- ここにプロジェクトで使用する技術スタックのバッチ -->
-- php8.4
-- laravel12
-- mysql8
-- pest3
+## 技術スタック
+![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?style=flat&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-12.0-FF2D20?style=flat&logo=laravel&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat&logo=mysql&logoColor=white)
+![PHPUnit](https://img.shields.io/badge/PHPUnit-11.5-366488?style=flat&logo=php&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-Alpine-009639?style=flat&logo=nginx&logoColor=white)
 
 ## 使用方法
 
