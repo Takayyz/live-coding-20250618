@@ -1,0 +1,59 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: live-coding-app
+    container_name: live-coding-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - live-coding
+
+  webserver:
+    image: nginx:alpine
+    container_name: live-coding-webserver
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src:/var/www
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - live-coding
+
+  db:
+    image: mysql:8.0
+    container_name: live-coding-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_PASSWORD: secret
+      MYSQL_USER: laravel
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - live-coding
+
+  # redis:
+  #   image: redis:alpine
+  #   container_name: laravel-redis
+  #   restart: unless-stopped
+  #   ports:
+  #     - "6379:6379"
+  #   networks:
+  #     - live-coding
+
+networks:
+  live-coding:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local
