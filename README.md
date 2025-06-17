@@ -6,6 +6,7 @@ TDDに関するLive Coding用リポジトリ
 ![Laravel](https://img.shields.io/badge/Laravel-12.0-FF2D20?style=flat&logo=laravel&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat&logo=mysql&logoColor=white)
 ![PHPUnit](https://img.shields.io/badge/PHPUnit-11.5-366488?style=flat&logo=php&logoColor=white)
+![Pest](https://img.shields.io/badge/Pest-3.8-41B883?style=flat&logo=php&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat&logo=docker&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-Alpine-009639?style=flat&logo=nginx&logoColor=white)
 
